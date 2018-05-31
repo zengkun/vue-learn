@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>data_demo</title>
+    <meta name="referrer" content="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./components/Index.js"></script>
+    <script src="./components/Detail.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 路由匹配到的组件将渲染在这里 -->
+        <router-view></router-view>
+    </div>
+</body>
+<script>
+Vue.component("my-header", {
+    template: `
+        <div class="header">{{title}}</div>
+    `,
+    props: ['title']
+})
+const routes = [{
+    path: '/',
+    component: Home,
+}, {
+    path: '/detail',
+    component: Detail,
+}, {
+    path: '*',
+    redirect: '/'
+}]
+
+const router = new VueRouter({
+    routes // （缩写）相当于 routes: routes
+})
+
+const app = new Vue({
+    router
+}).$mount('#app')
+</script>
+
+</html>

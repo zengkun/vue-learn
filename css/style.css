@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.pagewidth {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.header {
+	height: 50px;
+	line-height: 50px;
+	background: red;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+.movie_img {
+	width: 90px;
+	height: 120px;
+	float: left;
+}
+
+.movie_img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.movie_info {
+	margin-left: 110px;
+}
+
+.movie_info p {
+	line-height: 2;
+}
+
+h4 span {
+	font-weight: normal;
+}
+
+.movie_list ul li {
+	padding: 20px 0;
+	overflow: hidden;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+
+.detail_img {
+	width: 120px;
+	height: auto;
+	margin: 20px auto;
+}
+
+.detail_img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.castlist li {
+	float: left;
+	margin: 20px 10px 0 0;
+	width: 90px;
+	height: 120px;
+	text-align: center;
+}
+
+.castlist li img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 5px;
+}
+
+.showMore {
+	line-height: 40px;
+	text-align: center;
+}
